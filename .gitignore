@@ -1,0 +1,19 @@
+###################################################
+# Github                                          #
+# https://help.github.com/articles/ignoring-files #
+# https://github.com/github/gitignore             #
+###################################################
+
+# IDE Config #
+##############
+.classpath
+.project
+.metadata
+.settings/
+*.iml
+*.ipr
+*.iws
+.idea/
+.pmd
+.checkstyle
+code/
