@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>user_unix_script</id>
+    <name>User Backend Using Unix Scripts</name>
+    <summary>User management and authentication through arbitrary shell scripts</summary>
+    <description>
+        <![CDATA[
+			This app allows you to do user management against arbitrary UNIX shell commands. You can authenticate, create, delete users, as well as change their
+			password. The list of users is fetched from /etc/password file and the description of the user is fetched by reading the 'gecos' property of the
+			user. The application also includes pre and post executions if you need to trigger a shell script before or after an action. For instance, after a password
+			change you might need to execute a synchronization.
+
+			The scripts executed can be variables defined as :
+		 	* %u -> The username on which we make an action
+		 	* %p -> The password if provided with the action
+
+			By default, only users with UID >= 1000 are allowed to authenticate. If a command has no shell script defined, it will be automatically deactivated.
+			The configuration and details of the app are available in README.md.
+		]]>
+    </description>
+    <version>0.1.0</version>
+    <licence>agpl</licence>
+    <author mail="bcecchinato@users.noreply.github.com">Bastien Cecchinato</author>
+    <namespace>UserUnixScript</namespace>
+    <types>
+        <prelogin/>
+        <authentication/>
+    </types>
+    <documentation>
+        <admin>https://github.com/bcecchinato/user_unix_script/blob/master/README.md</admin>
+    </documentation>
+    <category>security</category>
+    <bugs>https://github.com/bcecchinato/user_unix_script/issues</bugs>
+    <repository type="git">https://github.com/bcecchinato/user_unix_script</repository>
+    <dependencies>
+        <nextcloud min-version="20" max-version="22"/>
+    </dependencies>
+</info>
