@@ -18,7 +18,7 @@
 			The configuration and details of the app are available in README.md.
 		]]>
     </description>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <licence>agpl</licence>
     <author mail="bcecchinato@users.noreply.github.com">Bastien Cecchinato</author>
     <namespace>UserUnixScript</namespace>
@@ -33,6 +33,6 @@
     <bugs>https://github.com/bcecchinato/user_unix_script/issues</bugs>
     <repository type="git">https://github.com/bcecchinato/user_unix_script</repository>
     <dependencies>
-        <nextcloud min-version="20" max-version="22"/>
+        <nextcloud min-version="20" max-version="23"/>
     </dependencies>
 </info>
